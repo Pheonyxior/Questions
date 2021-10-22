@@ -23,18 +23,19 @@ namespace Questions
 
                 Random rand = new Random();
                 int a = rand.Next(1, 51);
-                int b = rand.Next(2, 11);                                           
+                int b = rand.Next(2, 11);
+                int c = 0;
                 int op = rand.Next(0, 2);
-                // if génère une addition et attribue la réponse d'une addition à "a", else fait la même pour une multiplication
+                // if génère une addition et attribue la réponse d'une addition à "c", else fait la même pour une multiplication
                 if (op == 0)
                 {                    
                     Console.WriteLine(a.ToString() + " + " + b.ToString() + " = ");
-                    a = a + b;
+                    c = a + b;
                 }
                 else
                 {
                     Console.WriteLine(a.ToString() + " x " + b.ToString() + " = ");
-                    a = a * b;
+                    c = a * b;
                 }
 
                 // Prend une réponse de l'utilisateur et vérifie s'il s'agit d'un nombre entier
@@ -49,7 +50,7 @@ namespace Questions
                 }                
 
                 // Vérifie si la réponse est juste. Si oui, rajoute un point à la note.
-                if (Réponse == a)
+                if (Réponse == c)
                 {
                     Note++;                    
                 }                
